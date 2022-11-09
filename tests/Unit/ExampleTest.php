@@ -28,4 +28,38 @@ class ExampleTest extends TestCase
         // Then
         $this->assertEquals('Peter', $result);
     }
+
+    /** @test */
+    public function it_should_capatilize_first_letter_of_word()
+    {
+        // Given
+        $str = 'hallo welt';
+        // When
+        $result = StringUtils::capatilizeWords($str);
+        // Then
+        $this->assertEquals('Hallo Welt', $result);
+    }
+
+    /** @test */
+    public function it_should_add_spaces_after_every_letter_except_last_one()
+    {
+        // Given
+        $str = 'hallo';
+        // When
+        $result = StringUtils::addSpaces($str);
+        // Then
+        $this->assertEquals('h a l l o', $result);
+    }
+
+    /** @test */
+    public function remove_particular_letter_from_string()
+    {
+        // Given
+        $str = 'hallo';
+        // When
+        $result = StringUtils::removeLetterFromString($str, 'l');
+        // Then
+        $this->assertEquals('hao', $result);
+        $this->assertNotContains('l', str_split($result));
+    }
 }
