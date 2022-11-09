@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Facades\PaymentGateway;
-use App\Models\PaymentMethod;
+use App\Services\PaymentGateway;
 
 class PurchaseController extends Controller
 {
-    public function checkBalance()
+    public function checkBalance(PaymentGateway $gateway)
     {
-        return response()->json(['balance' => PaymentGateway::getBalance(new PaymentMethod())]);
+        return response()->json(['balance' => $gateway->getBalance()]);
     }
 }
