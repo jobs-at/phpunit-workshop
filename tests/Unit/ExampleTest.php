@@ -17,4 +17,15 @@ class ExampleTest extends TestCase
         // Then
         $this->assertTrue($result);
     }
+
+    /** @test */
+    public function it_should_capitalize_first_letter()
+    {
+        // Given
+        $word = 'peter';
+        // When
+        $result = StringUtils::capitalizeFirstLetter($word);
+        // Then
+        $this->assertEquals('Peter', $result);
+    }
 }

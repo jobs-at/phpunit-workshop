@@ -11,4 +11,9 @@ class StringUtils
     {
         return Str::lower(Str::reverse($str))=== Str::lower($str);
     }
+
+    public static function capitalizeFirstLetter(string $word): string
+    {
+        return Str::ucfirst($word);
+    }
 }
