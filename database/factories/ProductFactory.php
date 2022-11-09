@@ -2,12 +2,13 @@
 
 namespace Database\Factories;
 
+use App\Models\ProductInventory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProductInventory>
  */
-class ProductInventoryFactory extends Factory
+class ProductFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +18,8 @@ class ProductInventoryFactory extends Factory
     public function definition()
     {
         return [
-            'quantity' => 1
+            'name' => 'TEST',
+            'product_inventory_id' => ProductInventory::factory()->create()
         ];
     }
 }

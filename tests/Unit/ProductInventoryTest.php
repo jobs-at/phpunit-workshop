@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Models\Product;
 use App\Models\ProductInventory;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
