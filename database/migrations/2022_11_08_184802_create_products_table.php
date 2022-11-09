@@ -18,7 +18,7 @@ return new class () extends Migration {
             $table->id();
             $table->string('name');
             $table->float('price');
-            $table->foreignIdFor(Discount::class);
+            $table->foreignIdFor(Discount::class)->nullable();
             $table->foreignIdFor(ProductInventory::class);
             $table->timestamps();
         });
