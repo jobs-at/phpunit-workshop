@@ -7,15 +7,14 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function test_the_application_returns_a_successful_response()
+    /** @test */
+    public function it_should_check_whether_a_string_is_a_palindrome()
     {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
+        // Given
+        $str = 'Anna';
+        // When
+        $result = StringUtils::isPalindrome($str);
+        // Then
+        $this->assertTrue($result);
     }
 }

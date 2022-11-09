@@ -19,6 +19,28 @@ class ExampleTest extends TestCase
     }
 
     /** @test */
+    public function it_should_capitalize_every_word(){
+        $str = 'we are having a workshop';
+        $result = StringUtils::capitalize($str);
+        $this->assertEquals('We Are Having A Workshop', $result);
+    }
+
+    /** @test */
+    public function it_should_add_a_space_after_every_letter(){
+        $str = 'Anna';
+        $result = StringUtils::addSpaceAfterEveryLetter($str);
+        $this->assertEquals('A n n a', $result);
+    }
+
+    /** @test */
+    public function it_should_remove_letter(){
+        $str= 'Anna';
+        $result = StringUtils::removeGivenLetter($str, 'a');
+        $this->assertEquals('nn', $result);
+    }
+
+
+    /** @test */
     public function it_should_capitalize_first_letter()
     {
         // Given
