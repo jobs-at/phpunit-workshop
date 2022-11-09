@@ -3,16 +3,16 @@
 ## Simple Unit testing
 
 * Check whether a string is a palindrome
-* Capitalize first letter of every word
-* Add one space after every letter except the last one
-* Remove particular letter from string 
+* Capitalize first letter of every word (pair 1)
+* Add one space after every letter except the last one (pair 2)
+* Remove particular letter from string (pair 3)
 
 ## Unit testing with Laravel environment
 
 * Print the product inventory with highest stock (me)
 * Print most expensive product (pair 1)
 * Calculate actual price of product (pair 2)
-* Get type of payment method used in most purchases
+* Get type of payment method used in most purchases (pair 3)
 
 ## Feature testing - Basics
 

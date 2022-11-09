@@ -6,9 +6,11 @@ use Illuminate\Support\Str;
 
 class StringUtils
 {
-
     public static function isPalindrome(string $str): bool
     {
+        if (empty($str)) {
+            return false;
+        }
         return Str::lower(Str::reverse($str))=== Str::lower($str);
     }
 
