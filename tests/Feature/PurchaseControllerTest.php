@@ -52,8 +52,8 @@ class PurchaseControllerTest extends TestCase
             'product_id' => $product->id,
             'quantity' => 1
         ]);
-        // Assert that user received a notification via Twitter
 
+        // Assert that user received a notification via Twitter
         Twitter::assertTweetSent();
     }
 }

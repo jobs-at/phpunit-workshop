@@ -30,7 +30,7 @@ class PurchaseController extends Controller
             'quantity' => $request->quantity
         ]);
 
-        Twitter::send('Purchase created');
+        Twitter::send('Purchase was created.');
 
         return response()->json($purchase->toArray(), 201);
     }
