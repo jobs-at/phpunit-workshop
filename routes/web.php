@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/check-balance', [PurchaseController::class, 'checkBalance']);
+Route::post('/purchases', [PurchaseController::class, 'store']);

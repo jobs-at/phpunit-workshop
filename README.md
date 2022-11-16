@@ -25,7 +25,7 @@
 ## Fakes, Mocks, Stubs, Spies
 
 * A purchase can only be made if payment method has balance.
-* A user gets sent a Twitter message from Elon Musk after making a purchase successfully.
+* A user gets sent a Twitter message after making a purchase successfully.
   Group1 experiments with Fakes, Group2 with a Mock and Group3 with a Spy
 
 

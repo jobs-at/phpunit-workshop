@@ -6,7 +6,7 @@ use App\Models\ProductInventory;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ProductInventory>
+ * @extends Factory<ProductInventory>
  */
 class ProductFactory extends Factory
 {
@@ -19,7 +19,8 @@ class ProductFactory extends Factory
     {
         return [
             'name' => 'TEST',
-            'product_inventory_id' => ProductInventory::factory()->create()
+            'product_inventory_id' => ProductInventory::factory()->create(),
+            'price' => $this->faker->numberBetween(5, 100)
         ];
     }
 }

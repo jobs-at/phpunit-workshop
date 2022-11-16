@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\PaymentMethod;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,7 +17,6 @@ return new class () extends Migration {
             $table->id();
             $table->float('total_price');
             $table->foreignIdFor(User::class);
-            $table->foreignIdFor(PaymentMethod::class);
             $table->timestamps();
         });
     }
